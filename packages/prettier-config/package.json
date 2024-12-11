@@ -1,0 +1,13 @@
+{
+  "name": "@turbo-cr-test/prettier-config",
+  "version": "0.0.0",
+  "private": false,
+  "license": "MIT",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "prettier-plugin-tailwindcss": "^0.5.14"
+  }
+}

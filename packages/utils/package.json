@@ -1,6 +1,7 @@
 {
-  "name": "@repo/ui",
+  "name": "@turbo-cr-test/utils",
   "version": "0.0.0",
+  "private": false,
   "exports": {
     "./counter": "./components/counter.ts",
     "./header": "./components/header.ts",
@@ -11,8 +12,8 @@
     "lint": "eslint \"**/*.ts\""
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@turbo-cr-test/eslint-config": "workspace:*",
+    "@turbo-cr-test/typescript-config": "workspace:*",
     "eslint": "^8.57.0",
     "typescript": "5.5.4"
   }
