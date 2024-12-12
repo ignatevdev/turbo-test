@@ -1,5 +1,11 @@
 # @turbo-cr-test/utils
 
+## 2.12.0
+
+### Minor Changes
+
+- 3b526b8: 123
+
 ## 2.11.0
 
 ### Minor Changes
