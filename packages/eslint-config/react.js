@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["next", "./base"],
+  extends: ["next", "./index"],
   overrides: [],
   rules: {
     // React
