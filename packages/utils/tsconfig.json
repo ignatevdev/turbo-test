@@ -1,5 +1,11 @@
 {
   "extends": "@turbo-cr-test/typescript-config/base.json",
   "include": ["."],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
 }

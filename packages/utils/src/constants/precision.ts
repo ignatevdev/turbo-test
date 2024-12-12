@@ -1,0 +1,2 @@
+export const DEFAULT_AMOUNT_PRECISION = 2;
+export const MAXIMUM_AMOUNT_DECIMALS = 8;
