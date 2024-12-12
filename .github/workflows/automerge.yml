@@ -1,15 +1,23 @@
 name: Automerge
-on:
-  pull_request:
-    branches:
-      - main
+
+on: pull_request
+
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
-  Enable-Automerge:
+  changeset:
     runs-on: ubuntu-latest
+    if: github.ref_name == 'changeset-release/main'
     steps:
-      - name: Auto Merge
-        if: github.ref_name == 'changeset-release/main'
-        run: gh pr merge --auto --merge "$PR_URL"
+      - name: Approve a PR
+        run: gh pr review --approve "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
-          GITHUB_TOKEN: ${{secrets.PAT_GITHUB_ACTIONS}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Enable auto-merge for changeset PRs
+        run: gh pr merge --auto --rebase "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
