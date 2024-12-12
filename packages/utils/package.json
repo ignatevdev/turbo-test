@@ -9,7 +9,11 @@
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
-    "lint": "eslint \"**/*.ts\""
+    "eslint": "eslint \"**/*.ts\"",
+    "type-check": "tsc -p .",
+    "lint": "pnpm eslint && pnpm type-check",
+    "test": "vitest run",
+    "test:watch": "vitest watch"
   },
   "devDependencies": {
     "@turbo-cr-test/eslint-config": "workspace:*",
@@ -17,6 +21,7 @@
     "eslint": "^8.57.0",
     "tsup": "^8.3.5",
     "typescript": "5.5.4",
+    "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^2.1.8"
   },
   "dependencies": {
