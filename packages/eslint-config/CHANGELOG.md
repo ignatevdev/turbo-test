@@ -1,5 +1,29 @@
 # @turbo-cr-test/eslint-config
 
+## 2.6.0
+
+### Minor Changes
+
+- sasd
+
+## 2.5.0
+
+### Minor Changes
+
+- asd
+
+## 2.4.0
+
+### Minor Changes
+
+- Fix
+
+## 2.3.0
+
+### Minor Changes
+
+- Fix
+
 ## 2.2.0
 
 ### Minor Changes
