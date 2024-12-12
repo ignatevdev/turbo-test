@@ -1,5 +1,11 @@
 # @turbo-cr-test/utils
 
+## 2.1.0
+
+### Minor Changes
+
+- Eslint 9
+
 ## 2.0.0
 
 ### Major Changes
