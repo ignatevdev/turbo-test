@@ -86,7 +86,7 @@ export function formatWithPrecision(
 }
 
 export type FormatTokenAmountOptions = {
-  displayPrecision: number;
+  displayPrecision?: number;
 };
 export function formatTokenAmount(amount: Maybe<AmountValue>, options: FormatTokenAmountOptions): string {
   if (amount === undefined || amount === null) {
