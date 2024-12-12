@@ -29,9 +29,10 @@ jobs:
           cache: "pnpm"
       - run: pnpm i
       - name: Set publishing config
-        run: pnpm config set '//verdaccio.atamore.com/:_authToken' "${NODE_AUTH_TOKEN}"
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          echo "//verdaccio.atamore.com/:_authToken=${NPM_TOKEN}" > ~/.npmrc
       - name: Publish to npm
         id: changesets
         uses: changesets/action@v1
