@@ -4,12 +4,22 @@ on:
     branches:
       - main
 jobs:
-  Enable-Automerge:
+  automerge:
     runs-on: ubuntu-latest
     steps:
-      - name: Auto Merge
+       - name: "Merge pull request"
         if: github.ref_name == 'changeset-release/main'
-        run: gh pr merge --auto --merge "$PR_URL"
+        uses: "actions/github-script@v6"
         env:
-          PR_URL: ${{github.event.pull_request.html_url}}
           GITHUB_TOKEN: ${{secrets.PAT_GITHUB_ACTIONS}}
+        with:
+          script: |
+            const pullRequest = context.payload.workflow_run.pull_requests[0]
+            const repository = context.repo
+
+            await github.rest.pulls.merge({
+              merge_method: "squash",
+              owner: repository.owner,
+              pull_number: pullRequest.number,
+              repo: repository.repo,
+            })
