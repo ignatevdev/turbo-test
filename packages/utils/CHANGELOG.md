@@ -1,5 +1,11 @@
 # @turbo-cr-test/utils
 
+## 2.8.0
+
+### Minor Changes
+
+- 08f5b0a: Fix
+
 ## 2.7.0
 
 ### Minor Changes
