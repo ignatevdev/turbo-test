@@ -1,7 +1,7 @@
 import Decimal from "decimal.js";
 
-import type { Maybe } from "@/types";
 import { DEFAULT_AMOUNT_PRECISION, MAXIMUM_AMOUNT_DECIMALS } from "@/constants";
+import type { Maybe } from "@/types";
 
 export const NUMBER_FORMAT_LOCALE = "en-US";
 
@@ -27,7 +27,7 @@ export function formatWithPrecision(
   amount: AmountValue,
   options: {
     precision?: number;
-  } = {}
+  } = {},
 ): string {
   const { precision = DEFAULT_AMOUNT_PRECISION } = options;
 
@@ -88,10 +88,7 @@ export function formatWithPrecision(
 export type FormatTokenAmountOptions = {
   displayPrecision: number;
 };
-export function formatTokenAmount(
-  amount: Maybe<AmountValue>,
-  options: FormatTokenAmountOptions
-): string {
+export function formatTokenAmount(amount: Maybe<AmountValue>, options: FormatTokenAmountOptions): string {
   if (amount === undefined || amount === null) {
     return "N/A";
   }
@@ -118,7 +115,7 @@ export function formatPairTokenPrice(
   options: {
     precision?: number;
     compact?: boolean;
-  } = {}
+  } = {},
 ) {
   const { decimalsX, decimalsY } = decimals;
   const { precision, compact } = options;

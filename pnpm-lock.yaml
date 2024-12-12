@@ -80,6 +80,9 @@ importers:
       '@turbo-cr-test/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
+      '@turbo-cr-test/prettier-config':
+        specifier: workspace:*
+        version: link:../prettier-config
       '@turbo-cr-test/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
