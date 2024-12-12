@@ -1,6 +1,6 @@
 {
   "name": "@turbo-cr-test/eslint-config",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "module": "index.mjs",
   "license": "MIT",
   "publishConfig": {
@@ -17,6 +17,7 @@
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-simple-import-sort": "^12.1.1",
-    "eslint-plugin-turbo": "^2.3.3"
+    "eslint-plugin-turbo": "^2.3.3",
+    "typescript-eslint": "^8.18.0"
   }
 }
