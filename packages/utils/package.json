@@ -1,6 +1,6 @@
 {
   "name": "@turbo-cr-test/utils",
-  "version": "2.0.0",
+  "version": "2.6.0",
   "private": false,
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -10,6 +10,7 @@
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
     "eslint": "eslint \"**/*.ts\"",
+    "eslint:fix": "eslint \"**/*.ts\" --fix",
     "type-check": "tsc -p .",
     "lint": "pnpm eslint && pnpm type-check",
     "test": "vitest run",
@@ -18,6 +19,7 @@
   "devDependencies": {
     "@turbo-cr-test/eslint-config": "workspace:*",
     "@turbo-cr-test/typescript-config": "workspace:*",
+    "@turbo-cr-test/prettier-config": "workspace:*",
     "eslint": "^8.57.0",
     "tsup": "^8.3.5",
     "typescript": "5.5.4",
