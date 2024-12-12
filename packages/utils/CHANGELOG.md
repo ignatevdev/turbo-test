@@ -1,5 +1,11 @@
 # @turbo-cr-test/utils
 
+## 2.7.0
+
+### Minor Changes
+
+- b3c0c98: Fix types
+
 ## 2.6.0
 
 ### Minor Changes
