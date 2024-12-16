@@ -1,7 +1,7 @@
 import Decimal from "decimal.js";
 
-import { DEFAULT_AMOUNT_PRECISION, MAXIMUM_AMOUNT_DECIMALS } from "@/constants";
-import type { Maybe } from "@/types";
+import { DEFAULT_AMOUNT_PRECISION, MAXIMUM_AMOUNT_DECIMALS } from "../constants";
+import type { Maybe } from "../types";
 
 export const NUMBER_FORMAT_LOCALE = "en-US";
 
