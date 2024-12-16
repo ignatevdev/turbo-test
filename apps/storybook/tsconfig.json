@@ -1,0 +1,12 @@
+{
+  "extends": "@turbo-cr-test/typescript-config/react.json",
+  "include": ["."],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@turbo-cr-test/ui": ["../../packages/ui/src"],
+      "@turbo-cr-test/utils": ["../../packages/utils/src"]
+    }
+  }
+}
