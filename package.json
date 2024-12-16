@@ -1,7 +1,9 @@
 {
+  "name": "docs",
   "private": true,
   "scripts": {
     "build": "turbo build",
+    "storybook": "turbo run dev --filter=...{./apps/storybook}",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "test": "turbo test",
@@ -14,6 +16,5 @@
     "prettier": "^3.2.5",
     "turbo": "^2.3.3"
   },
-  "packageManager": "pnpm@8.15.6",
-  "name": "with-vite"
+  "packageManager": "pnpm@8.15.6"
 }
